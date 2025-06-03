@@ -1,11 +1,14 @@
-@if (colore) {
-<div
-  class="blocco-colore"
-  [style.backgroundColor]="colore.hex"
-  [ngClass]="{ 'attivo': colore.active }"
-  [style.--aura-color]="colore.hex"
-  (click)="onClick()"
+<div 
+  class="color-block" 
+  [style.background-color]="colore.hex"
+  [ngClass]="{ 'active': colore.active }"
+  (click)="onClicked()"
 >
-  <p>{{ colore.name }}</p>
+  <div class="color-name">{{ colore.name }}</div>
+  @if (colore.active) {
+    <div class="status">Attivo</div>
+  } @else {
+    <div class="status">Inattivo</div>
+  }
+  <div class="hex-code">{{ colore.hex }}</div>
 </div>
-}
