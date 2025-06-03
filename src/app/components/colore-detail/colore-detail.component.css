@@ -1,0 +1,24 @@
+.blocco-colore {
+  width: 160px;
+  height: 120px;
+  margin: 10px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  user-select: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.blocco-colore.attivo {
+  box-shadow:
+    0 0 10px 4px var(--aura-color),
+    0 0 20px 8px var(--aura-color);
+  outline: 2px solid var(--aura-color);
+}
