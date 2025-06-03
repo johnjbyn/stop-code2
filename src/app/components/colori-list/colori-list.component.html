@@ -1,7 +1,9 @@
+<h1 class="titolo-principale">Clicca sul colore per selezionarlo</h1>
+
 @for (gruppo of gruppiColori; track $index; let gi = $index) {
 <div class="gruppo-colore">
   <h2>{{ gruppo.nome }}</h2>
-  <div class="d-flex flex-wrap" style="gap: 1rem">
+  <div class="contenitore-colori">
     @for (colore of gruppo.colori; track $index; let ci = $index) {
     <app-colore-detail 
       [colore]="colore"
